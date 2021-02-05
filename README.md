@@ -1,5 +1,5 @@
 # phase-casserole
-Polyphonic "phasetable" digital synthesizer inspired by the Casio CZ-101.
+"Phase Casserole" a polyphonic "phasetable" digital synthesizer for Eurorack
 
 The aim of this project is to modernize the "Phase Distortion" (PD) algorithm developed for the Casio CZ-101 for use in a polyphonic digital oscillator Eurorack module built on the Electro-Smith Daisy DSP platform. The three main tasks of this project are:
 
