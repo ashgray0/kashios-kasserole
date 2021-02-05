@@ -1,5 +1,5 @@
 # phase-casserole
-Polyphonic "phasetable" digital synthesizer inspired by the Casio CZ-101
+Polyphonic "phasetable" digital synthesizer inspired by the Casio CZ-101.
 
 The aim of this project is to modernize the "Phase Distortion" (PD) algorithm developed for the Casio CZ-101 for use in a polyphonic digital oscillator Eurorack module built on the Electro-Smith Daisy DSP platform. The three main tasks of this project are:
 
@@ -8,3 +8,5 @@ The aim of this project is to modernize the "Phase Distortion" (PD) algorithm de
 2. Create dynamic changes over time in the oscillator output by mapping an envelope generator (EG) input to the value of the SCW. The minimum EG level (say, 0) corresponds to an output of -cos(t), and the maximum EG level (say, 1) corresponds to an output of -cos(MAP(t)). EG levels between 0 and 1 correspond to linear interpolation states of the operator function between those two extrema. This makes our operator function a simple wavetable of two SCWs. Depending on how the project develops, I may flesh this out into a fuller wavetable system (that is, if more complexity here actually sounds good!).
 
 3. Create a better user interface than that in the original Casio CZ-101. This will be accomplished by having all the main parameters (pitch, wavetable state, modulation attenuverting, wavetable selection, etc.) mapped to discrete sliders, knobs, and buttons and having the "under-the-hood" parameters (oscillator routing, ring modulation, quantization, etc.) accessible via a small OLED display and a digital encoder. The OLED will also serve as a real-time oscilloscope for the oscillator, which in my opinion is vital for developing an intuitive understand of what is going on in context of using a wavetable synthesizer.
+
+Once the basic DSP code is fully developed for the Daisy module, the module will be integrated into a Eurorack module with 2 oscillators per voice and 4 voice polyphony, controlled by analog CV/Gate inputs and/or MIDI. This level of polyphony is equivalent to the original CZ-101 and is a good balance between total number of voices and complexity of interfacing the module with analog inputs. I have a basic schematic of the Eurorack module in this repository (excluding the OLED - I haven't decided which specific component will be used here yet) based on the schematic for Electro-Smith's "Patch" Eurorack breakout module for the Daisy.  
